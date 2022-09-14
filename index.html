@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>Website 21</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+	</head>	
+	<body>
+		<header>
+			<nav>
+				<div class="logo">
+				Photo<span>pi</span>X
+				</div>
+				<div class="menu">
+					<a href="#">Home</a> 
+					<a href="#">Photo</a>
+					<a href="#">About</a>
+					<a href="#">Contact Us</a>
+				</div>
+				<div class="icon">
+					<i class="fa fa-search"></i>
+					<a href="#">Login</a>
+				</div>
+			</nav>
+			<section class="h-text">
+				<i  class="fa fa-camera" id="camera"></i>
+				<h2>Favourite Movie Photos</h2>
+				<input type="=text" name="" placeholder="Search">
+				<button> <i class="fa fa-search"></i></button>
+
+			</section>
+		</header>
+
+		<section class="filter-galary">
+			<div class="portfolio-menu">
+				<ul>
+					<li class="active" data-filter="*" >All</li>
+					<li data-filter=".nature">Main</li>
+					<li data-filter=".fashion">Main1</li>
+					<li data-filter=".wedding">Main2</li>
+				</ul>
+			</div>
+
+			<div class="portfolio-iteme">
+				<div class="iteme nature">
+					<img src="img/1.jpg" width="600" height="500">
+				</div>
+				<div class="iteme fashion">
+					<img src="img/2.jpg" width="600" height="500">
+				</div>
+				<div class="iteme wedding">
+					<img src="img/3.jpg" width="600" height="500">
+				</div>
+				<div class="iteme nature">
+					<img src="img/4.jpg" width="600" height="500">
+				</div>
+				<div class="iteme fashion">
+					<img src="img/5.jpg" width="600" height="500">
+				</div>
+				<div class="iteme wedding">
+					<img src="img/6.jpg" width="600" height="500">
+				</div>
+				<div class="iteme nature">
+					<img src="img/7.jpg" width="600" height="500">
+				</div>
+				<div class="iteme fashion">
+					<img src="img/2.jpg" width="600" height="500">
+				</div>
+				<div class="iteme wedding">
+					<img src="img/4.jpg" width="600" height="500">
+				</div>
+				<div class="iteme nature">
+					<img src="img/5.jpg" width="600" height="500">
+				</div>
+				<div class="iteme fashion">
+					<img src="img/11.jpg" width="600" height="500">
+				</div>
+				<div class="iteme wedding">
+					<img src="img/12.jpg" width="600" height="500">
+				</div>
+			</div>
+
+		</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+	<script type="text/javascript">
+		$('.portfolio-iteme').isotope({
+    // options
+     itemSelector: '.iteme',
+     layoutMode: 'fitRows'
+    });
+
+		$('.portfolio-menu ul li').click(function(){
+			$('.portfolio-menu ul li').removeClass('active');
+			$(this).addClass('active');
+
+			var  selector = $(this).attr('data-filter');
+			$('.portfolio-iteme').isotope({
+				filter:selector
+			});
+			return false;
+		});
+	</script>
+
+	<section class="member">
+		<div class="member-info">
+			<h1>Wonderful<span>Photos</span></h1>
+			<p>Wonderful Photos</p>
+		</div>
+		<div class="member-card">
+			<img scr="img/second.jpg">
+			<p>
+				kishan Viradiya Favourite photos
+						</p>
+				<img src="img/1.jpg" width="300" height="300">
+				<img src="img/2.jpg" width="300" height="300">
+				<img src="img/3.jpg" width="300" height="300">
+				<img src="img/4.jpg" width="300" height="300">
+		</div>
+
+	</section>
+
+	</body>
+</html>
